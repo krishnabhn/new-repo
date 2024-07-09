@@ -1,0 +1,87 @@
+what is chaos engineering?
+Why chaos engineering?
+why you need chaos engineering ?
+what is disaster recovery in chaos engineering ?
+what is chaos monkey ?
+what is grmlin free ?
+what is kube monkey ?
+what is cloud native environment?
+
+kubernetes componenets 
+kubectl
+1.master componenets
+api server 
+scheduler
+control manager
+etcd
+
+2. node componenets
+kubelet
+kube-proxy
+
+
+3.kubernetes objects 
+pod
+replication controller
+replicaset
+daemonset
+deployment strategies 1.rolling deployment 2.recreate 3.blue/green deployment 4.
+service  1.clusterIP 2.nodeport 3.Load balancer
+volume
+job
+
+kubectl apply -f chaos-litmus-chaos-enable.yml
+
+metadata.name
+status.phase=Running
+
+kubectl get node -o wide
+kubectl get svc -n resilience-engineering
+
+minikube start --kubernetes-version=v1.24.0
+
+minikube start -p minikube2 --kubernetes-version=v1.24.0
+
+minikube status
+
+kubectl apply -f https://litmuschaos.github.io/litmus/2.14.0/litmus-2.14.0.yaml
+
+kubectl exec -it nginx-project-84599d9d8d-xcvmp -- /bin/bash  (to go inside the pod)
+
+kubectl port-forward pod/nginx-project-84599d9d8d-xcvmp 8080:80 (nginx port forward)
+
+aws eks --region us-east-1 update-kubeconfig --name resilience-team
+
+kubectl get deployments --show-labels (to check labels, so that it will be visible in litmus dashboard)
+ kubectl label deployment <deployment-name> <desired-name> (( add deployment labels))
+
+helm remove litmus-chaos
+
+kubectl get pods -n litmus | grep -E nginx | wc -l (cmd-probe)
+
+kubectl port-forward svc/litmusportal-frontend-service 7000:9091 -n litmus
+
+kubectl get pods -n litmus -w
+kubectl get svc -n litmus
+kubectl top pods
+kubectl get deploy -o wide  (container kill)
+Kubectl exec <pod-name> -it df   (disk fill)
+ping <target-hostname>  (dns-error)
+ping <target-hostname> (dns-spoofing)
+kubectl top pod -n litmus (memory hog)
+
+Kubectl get deployments
+kubectl get deployments --show-labels  (pod-delete)
+
+
+curl <IP> (pod-http-modify)
+
+Kubectl get deploy
+Kubectl get po -w  (pod-auto-scaler)
+
+kubectl top pods (pod-io-stress)
+
+
+curl -I http://targetpodip:targetpodport/
+wget -q --server-response http://targetpodip:targetpodport/
+

@@ -1,0 +1,16 @@
+Referred resiliency engineering document and completed quizzes present in that course
+choas engineering documentation
+installed wsl
+installed ubuntu
+installed docker
+installed kubernetes
+installed litmus 3.0
+later downgraded 2.14 
+pod-delete yaml created
+facing issues with cpu-pod-hog yaml creation
+
+
+more about docker
+kubernetes
+choas engineering
+

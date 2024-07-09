@@ -1,0 +1,28 @@
+kubectl create deployment nginx-project --image=nginx
+  314  clear
+  315  kubectl get deployments
+  316  kubectl describe deployment nginx-project
+  317  kubectl get deploy nginx -n nginx-project -o yaml
+  318  kubectl get ns
+  319  kubectl get pods -l app=nginx
+  320  kubectl apply -f nginx.yml
+  321  kubectl run nginx --image=nginx
+  322  kubectl get pods
+  323  k exec -it nginx sh
+  324  kubectl exec -it nginx sh
+  325  kubectl expose pod nginx --port=80 --target-port=80 --name=internal-service
+  326  kubectl get svc
+  327  minikube ssh
+  328  kubectl get deployment
+  329  kubectl get deployments
+  330  kubectl create -f
+https://k8s.io/examples/application/deployment.yaml
+  331  vi pod.yaml
+  332  kubectl create -f pod.yaml
+  333  kubectl get pods
+  334  kubectl apply -f
+https://k8s.io/examples/application/deployment.yaml
+  335  kubectl get deployments
+  336  kubectl get deployment
+  337  kubectl port-forward svc/litmusportal-frontend-service 8000:9091 -n litmus
+  338  history

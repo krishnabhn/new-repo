@@ -1,0 +1,668 @@
+[10:32] Maheswara Reddy
+sudo apt-get update
+
+    2  sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common libssl-dev libffi-dev git wget nano
+
+    3  sudo groupadd docker
+
+    4  sudo usermod -aG docker reddyreddy
+
+    5  id
+
+    6  curl -fsSl https://download.docker.com/linux/ubuntu/gpg  | sudo apt-key add
+
+    7  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+    8  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
+
+    9  sudo apt-get update
+
+   10  sudo apt-get upgrade -y
+
+   11  sudo apt-get autoremove -y
+
+   12  sudo apt-get install -y docker-ce containerd.io
+
+   13  echo "sudo service docker start" >> ~/.profile
+
+   14  exit
+
+   15  sudo update-alternatives --config iptables
+
+   16  docker -v
+
+   17  docker ps
+
+   18  sudo systemctl status docker
+
+   19  sudo systemctl start docker
+
+   20  minikube status
+
+   21  sudo apt get update
+
+   22  sudo apt update
+
+   23  sudo apt upgrade
+
+   24  sudo apt install -y curl
+
+   25  curl -LO
+
+   26  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+
+   27  sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+   28  minikube start
+
+   29  minikube start --kubernetes-version=v1.24.0
+
+   30  minikube status
+
+   31  kubectl version
+
+   32  minikube version
+
+   33  curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+
+   34  chmod +x kubectl
+
+   35  sudo mv kubectl /usr/local/bin/
+
+   36  kubectl version
+
+   37  kubectl apply -f https://litmuschaos.github.io/litmus/2.14.0/litmus-2.14.0.yaml
+
+   38  kubectl get pods -n litmus -w
+
+   39  kubectl create deployment nginx-project --image=nginx
+
+   40  kubectl get deployments
+
+   41  kubectl describe deployment nginx-project
+
+   42  kubectl get deploy nginx -n nginx-project -o yaml
+
+   43  kubectl get ns
+
+   44  kubectl get pods -l app=nginx
+
+   45  kubectl apply -f nginx.yml
+
+   46  kubectl run nginx --image=nginx
+
+   47  kubectl get pods
+
+   48  kubectl exec -it nginx sh
+
+   49  sudo systemctl status docker
+
+   50  systemctl status docker
+
+   51  minikube start --kubernetes-version=v1.24.0
+
+   52  docker ps
+
+   53  kubectl get svc -n litmus
+
+   54  kubectl port-forward svc/litmusportal-frontend-service 8000:9091 -n litmus
+
+   55  minikube status
+
+   56  kubectl expose pod nginx --port=80 --target-port=80 --name=internal-service
+
+   57  kubectl get svc
+
+   58  minikube ssh
+
+   59  kubectl create -f https://k8s.io/examples/application/deployment.yaml
+
+   60  kubectl create -f pod.yam
+
+   61  kubectl get pods
+
+   62  kubectl apply -f
+
+   63  kubectl apply -f https://k8s.io/examples/application/deployment.yaml
+
+   64  kubectl get deployments
+
+   65  minikube status
+
+   66  kubectl port-forward svc/litmusportal-frontend-service 8000:9091 -n litmus
+
+   67  minikube start
+
+   68  minikube status
+
+   69  kubectl get pods -n litmus -w
+
+   70  minikube status
+
+   71  minikube stop
+
+   72  minikube start
+
+   73  minikube status
+
+   74  kubectl port-forward svc/litmusportal-frontend-service 8000:9091 -n litmus
+
+   75  minikube status
+
+   76  minikube stop
+
+   77  minikube start
+
+   78  minikube status
+
+   79  kubectl get pods -n litmus
+
+   80  kubectl get pods -n litmus -w
+
+   81  minikube status
+
+   82  minikube start
+
+   83  kubectl get pods -n litmus -w
+
+   84  docket container ps
+
+   85  docker container ps
+
+   86  docker container ps -w
+
+   87  kubectl get pods -n litmus -w
+
+   88  docker info
+
+   89  containerd info
+
+   90  docker ps
+
+   91  docker inspect containerd
+
+   92  docker info
+
+   93  docker inspect ae07eda36dd25f8a1b98dfbf587313b99c0190bb
+
+   94  /etc/docker
+
+   95  '/etc/docker'
+
+   96  cd '/etc/docker'
+
+   97  ls
+
+   98  ls -l
+
+   99  ..
+
+  100  cd
+
+  101  kubectl configuration
+
+  102  minikube status
+
+  103  kubectl get pods
+
+  104  kubectl get pods -n litmus -w
+
+  105  docker context inspect | jq -r .[0].Endpoints.docker.Host | sed "s^unix://^^"
+
+  106  docker context inspect |
+
+  107  docker context inspect
+
+  108  containerd context inspect
+
+  109  docker context inspect
+
+  110  docker  inspect
+
+  111  docker  inspect --help
+
+  112  containerd --version
+
+  113  containerd inspect
+
+  114  containerd context inspect
+
+  115  sudo -u
+
+  116  ltr
+
+  117  ltr -l
+
+  118  sudo ctr container ls
+
+  119  crictl ps
+
+  120  ctr task list
+
+  121  kubectl -A
+
+  122  lsof /path/to/socket
+
+  123  pid
+
+  124  PID
+
+  125  SS -X
+
+  126  ss -x
+
+  127  kubectl get container
+
+  128  kubectl get container -n litmus
+
+  129  kubectl get deployment
+
+  130  SOCKET_PATH
+
+  131  kubectl get chaosresult -n litmus
+
+  132  kubectl get chaosresult -n litmus | grep "container"
+
+  133  kubectl get chaosresult -n litmus | grep "container-kill"
+
+  134  kubectl top pod
+
+  135  kubectl top pod -n limus
+
+  136  minikube status
+
+  137  kubectl get deploy
+
+  138  kubect get deploy -o wide
+
+  139  kubectl get deploy -o wide
+
+  140  ls
+
+  141  cd ..
+
+  142  cd
+
+  143  kubectl get deploy -o wide
+
+  144  kubectl get deploy -n litmus -o wide
+
+  145  kubectl get deploy -o wide
+
+  146  pod
+[10:32] Maheswara Reddy
+146  pod
+
+  147  top
+
+  148  df -Th
+
+  149  free
+
+  150  kubectl top
+
+  151  kubectl top pod
+
+  152  kubectl top pod -n litmus
+
+  153  kubectl top pods -n litmus
+
+  154  kubectl get deploy
+
+  155  kubectl get top pod -n litmus
+
+  156  kubectl get top  -n litmus
+
+  157  kubectl get top
+
+  158  kubectl top
+
+  159  kubectl top --help
+
+  160  kubectl top pod
+
+  161  docker info
+
+  162  kubectl top pod
+
+  163  kubectl top pod -A
+
+  164  kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
+  165  kubectl top pod -A
+
+  166  kubectl top pod
+
+  167  kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/high-availability.yaml
+
+  168  kubectl top pod
+
+  169  kubectl port-forward svc/litmusportal-frontend-service 8000:9091 -n litmus
+
+  170  cd
+
+  171  kubectl port-forward svc/litmusportal-frontend-service 8000:9091 -n litmus
+
+  172  kubectl get deploy
+
+  173  df -TH
+
+  174  free
+
+  175  memory free
+
+  176  kubectl top pod
+
+  177  kubectl top pod podname --namespace=default
+
+  178  kubectl get pods
+
+  179  kubectl top pods --all-namespaces
+
+  180  kubectl get ns
+
+  181  kubectl get chaosexperiments
+
+  182  kubectl get chaosexperiments -n litmus
+
+  183  watch kubectl get pods -n litmus
+
+  184  kubectl top pod -n litmus
+
+  185  minikube stop
+
+  186  minikube status
+
+  187  minikube start
+
+  188  kubectl top pod -n litmus
+
+  189  kubectl get ns
+
+  190  kubectl remove -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/high-availability.yaml
+
+  191  kubectl rm -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/high-availability.yaml
+
+  192  kubectl delete -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/high-availability.yaml
+
+  193  kubectl delete -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
+  194  kubectl delete  https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
+  195  kubectl top pod -n litmus
+
+  196  kubectl get ns
+
+  197  kubectl apply -f https://raw.githubusercontent.com/pythianarora/total-practice/master/sample-kubernetes-code/metrics-server.yaml
+
+  198  kubectl top pod -n litmus
+
+  199  kubectl delete -f https://raw.githubusercontent.com/pythianarora/total-practice/master/sample-kubernetes-code/metrics-server.yaml
+
+  200  cd /home
+
+  201  wget -O metrics-server.yaml https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
+  202  sudo wget -O metrics-server.yaml https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
+  203  vim metrics-server.yaml
+
+  204  delete metrics-server.yaml
+
+  205  ls
+
+  206  rm metrics-server.yaml
+
+  207  sudo rm metrics-server.yaml
+
+  208  ls
+
+  209  cd
+
+  210  kubectl top pod -n litmus
+
+  211  wget https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
+  212  kubectl apply -f components.yaml
+
+  213  kubectl get pods -n kube-system
+
+  214  kubectl top pods
+
+  215  kubectl get pods -n kube-system -w
+
+  216  kubectl get pods -n kube-system
+
+  217  kubectl top nodes
+
+  218  kubectl get pods -n kube-system -w
+
+  219  kubectl logs metrics-server-57d7d5655c-thgxl -n kube-system
+
+  220  kubectl delete pod metrics-server-57d7d5655c-thgxl -n kube-system
+
+  221  vim components.yaml
+
+  222  kubectl apply -f components.yaml
+
+  223  kubectl get pods -n kube-system
+
+  224  kubectl get pods -n kube-system -w
+
+  225  kubectl get pods -n kube-system
+
+  226  kubectl top
+
+  227  kubectl top -n litmus
+
+  228  kubectl top pod -n litmus
+
+  229  minikube start: kubectl top node/pod
+
+  230  ls
+
+  231  rm components.yaml
+
+  232  ls
+
+  233  kubectl top
+
+  234  top -v
+
+  235  kubectl get apiservices
+
+  236  kubectl edit deployment -n kube-system metrics-server
+
+  237  kubectl get apiservices
+
+  238  kubectl edit deployment -n kube-system metrics-server
+
+  239  wget https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.5.0/components.yaml
+
+  240  ls
+
+  241  vim components.yaml
+
+  242  kubectl apply -f components.yaml
+
+  243  kubectl get nodes -n litmus
+
+  244  kubectl top nodes -n litmus
+
+  245  kubectl top pods -n litmus
+
+  246  kubectl top pods -n litmus -w
+
+  247  kubectl top pods -n litmus
+
+  248  watch kubectl top pods -n litmus
+
+  249  watch kubectl top pods
+
+  250  kubectl top
+
+  251  kubectl top pods
+
+  252  kubectl top pods --df -h
+
+  253  kubectl top pods --df -Th
+
+  254  kubectl top pods df -Th
+
+  255  kubectl top pods df -h
+
+  256  kubectl top pods -df -h
+
+  257  kubectl top pods --df -h
+
+  258  kubectl top  --df -h
+
+  259  kubectl top df -h
+
+  260  kubectl get pv
+
+  261  df
+
+  262  watch kubectl top pods
+
+  263  kubectl exec -it nginx-project-84599d9d8d-xcvmp --df -h
+
+  264  kubectl top pod --all-namespaces | grep -i
+
+  265  watch kubectl top pods
+
+  266  kubectl top pod --all-namespaces | grep -i nginx-project-84599d9d8d-xcvmp
+
+  267  kubectl get events
+
+  268  kubectl get events -n litmus
+
+  269  kubectl get events -n litmus --sort -b
+
+  270  kubectl get events -n litmus ..sort .b
+
+  271  kubectl get pods -n litmus
+
+  272  watch kubectl get pods -n litmus
+
+  273  watch kubectl top pods -n litmus
+
+  274  watch kubectl get depoly -o wide
+
+  275  watch kubectl get deploy -o wide
+
+  276  kubectl top pods
+
+  277  kubectl get deploy
+
+  278  kubectl get deploy --show-labels
+
+  279  kubectl top po
+
+  280  kubectl get free
+
+  281  kubectl free po
+
+  282  watch kubectl top po
+
+  283  watch kubectl top po df -Th
+
+  284  kubectl exec <pod-name> -it df
+
+  285  kubectl get po
+
+  286  kubectl exec nginx-project-84599d9d8d-xcvmp -it df
+
+  287  kubectl get po
+
+  288  kubectl exec nginx-project-84599d9d8d-xcvmp -it df
+
+  289  watch kubectl exec nginx-project-84599d9d8d-xcvmp -it df
+
+  290  kubectl get po  -w
+
+  291  kubectl get po --show-labels
+
+  292  kubectl get deploy
+
+  293  watch kubectl get deploy
+
+  294  kubectl get po -w
+
+  295  ss
+
+  296  kubectl get deploy
+
+  297  kubectl get deploy --show-labels
+
+  298  kubectl label pod nginx-deployment app=nginx
+
+  299  watch kubectl top pods
+
+  300  kubectl get pods
+
+  301  kubectl exec nginx-project-84599d9d8d-xcvmp -it df
+
+  302  watch kubectl exec nginx-project-84599d9d8d-xcvmp -it df
+
+  303  kubectl label pod nginx-deployment app=nginx
+
+  304  kubectl label pods nginx-deployment app=nginx
+
+  305  kubectl labels pods nginx-deployment app=nginx
+
+  306  kubectl label pods nginx-deploymen app=prod
+
+  307  kubectl get po
+
+  308  kubectl get po --show-labels
+
+  309  kubectl get deploy --show-labels
+
+  310  kubectl describe nginx-deployment
+
+  311  kubectl label deploy nginx-deploymen app=prod
+
+  312  kubectl label deploy nginx-deployment app=prod
+
+  313  kubectl get deploy --show-labels
+
+  314  kubectl port-forward svc/litmusportal-frontend-service 8000:9091 -n litmus
+
+  315  cd
+
+  316  kubectl port-forward svc/litmusportal-frontend-service 8000:9091 -n litmus
+
+  317  minikube status
+
+  318  minikube start
+
+  319  minikube status
+
+  320  ifconfig
+
+  321  if addr
+
+  322  ip addr
+
+  323  ping 172.30.247.168
+
+  324  watch kubectl top pods
+
+  325  minikube status
+
+  326  minikube start
+
+  327  watch kubectl top pods -n litmus
+
+  328  watch kubectl get pods -n litmus
+
+  329  hostname
+
+  330  inspect
+
+  331  kubectl get svc
+
+  332  kubectl get svc -n litmus
+
+  333  history

@@ -1,0 +1,15 @@
+ kubectl version
+  414  which kubectl
+  415  sudo apt-get install kubectl=1.24.0
+  416  which kubectl
+  417  sudo apt-get install kubectl=1.24.0
+  418  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+  419  curl -LO https://dl.k8s.io/release/v1.24.0/bin/linux/amd64/kubectl
+  420  sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+  421  chmod +x kubectl
+  422  mkdir -p ~/.local/bin
+  423  mv ./kubectl ~/.local/bin/kubectl
+  424  kubectl version --client
+  425  kubectl version
+  426  kubectl version --client --output=yaml
+

@@ -1,0 +1,321 @@
+1.what is chaos engineering?
+
+The core idea is to deliberately inject failures and disruptions into a system in a controlled manner to uncover weaknesses, vulnerabilities, and failure modes before they manifest in real-world.
+
+Hypothesis testing: Chaos experiments start with a hypothesis about how the system might behave under certain adverse conditions.
+
+Automated experimentation: Chaos experiments are often automated to ensure repeatability and consistency.
+
+Gradual rollout: Chaos experiments typically start small, affecting a limited subset of the system's components, before scaling up to more significant tests.
+
+Monitoring and measurement: Monitoring the system during chaos experiments is crucial to understanding its behavior and identifying any anomalies or unexpected outcomes.
+
+Failure as a learning opportunity: Chaos engineering embraces the idea that failures are inevitable in complex systems and sees them as opportunities for learning and improvement.
+
+
+2. Why chaos engineering ?
+
+
+Identifying weaknesses: Chaos engineering allows organizations to proactively identify weaknesses and vulnerabilities in their systems before they cause significant disruptions or outages. By intentionally inducing failures, organizations can uncover hidden issues that might not be apparent under normal operating conditions.
+
+Building confidence in system resilience: By continuously running chaos experiments, organizations can build confidence in their system's ability to withstand turbulent conditions. This confidence comes from knowing that the system has been thoroughly tested and can gracefully handle failures without impacting critical services or functionalities.
+
+Validating assumptions: Chaos engineering helps validate assumptions about system behavior and performance. It allows organizations to test whether their assumptions about fault tolerance, scalability, and redundancy hold true in real-world scenarios.
+
+Improving incident response: Chaos engineering can also help organizations improve their incident response capabilities. By simulating various failure scenarios, teams can refine their incident response procedures, develop better monitoring and alerting systems, and enhance their overall ability to detect, diagnose, and mitigate issues.
+
+3 . why you need chaos engineering ?
+
+Predicting and preventing failures: Chaos engineering allows you to proactively identify potential weaknesses and failure modes in your system before they manifest in production. By intentionally introducing controlled failures, you can uncover vulnerabilities that might otherwise go unnoticed until they cause significant disruptions or outages.
+
+Improving system resilience: Chaos engineering helps you build confidence in your system's resilience by demonstrating its ability to withstand failures and turbulent conditions. By continuously testing and refining your system's response to various failure scenarios, you can make it more resilient and better prepared to handle unexpected challenges.
+
+Validating assumptions: Chaos engineering enables you to validate assumptions about your system's behavior, performance, and reliability. By conducting experiments that simulate real-world conditions, you can verify whether your design decisions and architectural choices align with your expectations and requirements.
+
+Enhancing incident response: Chaos engineering can improve your organization's incident response capabilities by helping you identify gaps in your monitoring, alerting, and troubleshooting processes. By simulating failures and observing how your team responds, you can identify areas for improvement and refine your incident response procedures accordingly.
+
+4. what is disaster recovery in chaos engineering ?
+
+Disaster recovery in the context of chaos engineering refers to the process of ensuring that a system can recover and resume normal operation following a simulated disaster or failure scenario.
+chaos engineering typically focuses on deliberately inducing failures to test system resilience, disaster recovery specifically addresses the ability of the system to recover from those failures and restore functionality to an acceptable state.
+
+5. what is chaos monkey ?
+
+Chaos Monkey is a widely-known tool developed by Netflix, designed to enhance resilience in distributed systems through the practice of chaos engineering. The concept of Chaos Monkey is based on the principle of intentionally introducing failures into a system to test its resilience and fault tolerance.
+
+Here's how Chaos Monkey works and its key features:
+
+Random failure injection: Chaos Monkey operates by randomly selecting instances within a distributed system and terminating them. By doing so, it simulates real-world failures that can occur in production environments.
+
+Cloud-native architecture support: Chaos Monkey is specifically designed for cloud-native architectures, where services are distributed across multiple instances or containers. It works with cloud platforms like Amazon Web Services (AWS) to terminate instances within an Auto Scaling Group.
+
+Controlled chaos: While Chaos Monkey introduces chaos into the system, it does so in a controlled and predictable manner. Users can define schedules and constraints to specify when and where chaos experiments should be conducted, ensuring that they do not disrupt critical operations or impact customer experience during peak usage periods.
+
+what is grmlin free ?
+
+Gremlin Free is a version of the chaos engineering platform offered by Gremlin, a company that specializes in chaos engineering tools and services. Gremlin provides a range of tools designed to help organizations proactively identify weaknesses and vulnerabilities in their systems by simulating real-world failures.
+
+what is kube monkey ?
+
+Kube Monkey, also known as Kube-Monkey, is a chaos engineering tool specifically designed for Kubernetes environments. It operates similarly to Chaos Monkey, which is focused on disrupting instances in cloud-based environments.
+
+
+
+User
+what is chaos engineering
+ChatGPT
+Chaos engineering is a discipline within software engineering that focuses on experimenting on a system to build confidence in its resilience and ability to withstand turbulent conditions. The core idea is to deliberately inject failures and disruptions into a system in a controlled manner to uncover weaknesses, vulnerabilities, and failure modes before they manifest in real-world scenarios.
+
+Key principles of chaos engineering include:
+
+Hypothesis testing: Chaos experiments start with a hypothesis about how the system might behave under certain adverse conditions.
+
+Automated experimentation: Chaos experiments are often automated to ensure repeatability and consistency.
+
+Gradual rollout: Chaos experiments typically start small, affecting a limited subset of the system's components, before scaling up to more significant tests.
+
+Monitoring and measurement: Monitoring the system during chaos experiments is crucial to understanding its behavior and identifying any anomalies or unexpected outcomes.
+
+Failure as a learning opportunity: Chaos engineering embraces the idea that failures are inevitable in complex systems and sees them as opportunities for learning and improvement.
+
+By deliberately inducing failures and disruptions, chaos engineering helps organizations identify weaknesses in their systems, validate assumptions about system behavior, and ultimately build more resilient and reliable software architectures. It's particularly valuable in distributed systems and cloud-native architectures where failures can be more complex and unpredictable.
+
+User
+why chaos engineering
+ChatGPT
+Chaos engineering is employed for several reasons, each contributing to the overall goal of improving system resilience and reliability. Here are some key reasons why chaos engineering is used:
+
+Identifying weaknesses: Chaos engineering allows organizations to proactively identify weaknesses and vulnerabilities in their systems before they cause significant disruptions or outages. By intentionally inducing failures, organizations can uncover hidden issues that might not be apparent under normal operating conditions.
+
+Building confidence in system resilience: By continuously running chaos experiments, organizations can build confidence in their system's ability to withstand turbulent conditions. This confidence comes from knowing that the system has been thoroughly tested and can gracefully handle failures without impacting critical services or functionalities.
+
+Validating assumptions: Chaos engineering helps validate assumptions about system behavior and performance. It allows organizations to test whether their assumptions about fault tolerance, scalability, and redundancy hold true in real-world scenarios.
+
+Improving incident response: Chaos engineering can also help organizations improve their incident response capabilities. By simulating various failure scenarios, teams can refine their incident response procedures, develop better monitoring and alerting systems, and enhance their overall ability to detect, diagnose, and mitigate issues.
+
+Cultural shift towards resilience: Embracing chaos engineering fosters a cultural shift towards resilience within organizations. It encourages teams to prioritize reliability and resilience, rather than solely focusing on adding new features or optimizing performance. This cultural shift can lead to more robust engineering practices and ultimately improve the overall quality of the software and services delivered.
+
+Cost-effective risk management: Chaos engineering provides a cost-effective way to manage risks associated with system failures. By proactively identifying and addressing weaknesses, organizations can avoid the potentially high costs associated with downtime, lost revenue, reputational damage, and customer churn that may result from unanticipated failures.
+
+Overall, chaos engineering is a proactive approach to managing system complexity and mitigating the impact of failures in today's increasingly interconnected and distributed computing environments. It helps organizations build more resilient systems that can adapt and thrive in the face of uncertainty and change.
+
+User
+why you need chaos engineering
+ChatGPT
+Chaos engineering is valuable for several reasons, making it an essential practice for organizations that aim to build and maintain robust, resilient, and reliable systems. Here's why you need chaos engineering:
+
+Predicting and preventing failures: Chaos engineering allows you to proactively identify potential weaknesses and failure modes in your system before they manifest in production. By intentionally introducing controlled failures, you can uncover vulnerabilities that might otherwise go unnoticed until they cause significant disruptions or outages.
+
+Improving system resilience: Chaos engineering helps you build confidence in your system's resilience by demonstrating its ability to withstand failures and turbulent conditions. By continuously testing and refining your system's response to various failure scenarios, you can make it more resilient and better prepared to handle unexpected challenges.
+
+Validating assumptions: Chaos engineering enables you to validate assumptions about your system's behavior, performance, and reliability. By conducting experiments that simulate real-world conditions, you can verify whether your design decisions and architectural choices align with your expectations and requirements.
+
+Enhancing incident response: Chaos engineering can improve your organization's incident response capabilities by helping you identify gaps in your monitoring, alerting, and troubleshooting processes. By simulating failures and observing how your team responds, you can identify areas for improvement and refine your incident response procedures accordingly.
+
+Cultural shift towards resilience: Embracing chaos engineering fosters a culture of resilience within your organization. By prioritizing reliability, stability, and fault tolerance, you can create an environment where teams collaborate to build robust systems that can adapt and recover from failures gracefully.
+
+Optimizing resource allocation: Chaos engineering can help you optimize your resource allocation by identifying areas where additional investments in redundancy, scalability, or fault tolerance are needed. By understanding your system's weaknesses and performance bottlenecks, you can make informed decisions about where to allocate resources to maximize resilience and reliability.
+
+Meeting customer expectations: In today's digital world, customers expect uninterrupted access to services and applications. Chaos engineering helps you meet these expectations by ensuring that your systems are resilient enough to withstand failures without disrupting the user experience.
+
+Overall, chaos engineering is a proactive approach to managing risk and improving the reliability of your systems. By systematically introducing controlled chaos into your environment, you can identify and address weaknesses, build confidence in your system's resilience, and ultimately deliver a better experience for your users.
+
+User
+what is disaster recovery in chaos engineering
+ChatGPT
+Disaster recovery in the context of chaos engineering refers to the process of ensuring that a system can recover and resume normal operation following a simulated disaster or failure scenario. While chaos engineering typically focuses on deliberately inducing failures to test system resilience, disaster recovery specifically addresses the ability of the system to recover from those failures and restore functionality to an acceptable state.
+
+Here are key aspects of disaster recovery in chaos engineering:
+
+Backup and restore mechanisms: Effective disaster recovery involves implementing robust backup and restore mechanisms for critical data and system configurations. This ensures that in the event of a failure, data can be restored to a consistent state and system configurations can be recovered.
+
+Redundancy and failover: Disaster recovery often relies on redundancy and failover mechanisms to minimize downtime and ensure continuous availability of services. This may involve deploying redundant components, such as multiple servers or data centers, and implementing automated failover mechanisms to redirect traffic in case of failures.
+
+Automated recovery procedures: Automating recovery procedures is essential for minimizing recovery time and reducing the potential for human error. By automating the process of restoring services and reconfiguring the system after a failure, organizations can accelerate recovery and improve overall system reliability.
+
+Testing and validation: Like other aspects of chaos engineering, disaster recovery plans should be thoroughly tested and validated through simulated failure scenarios. This may involve conducting regular drills or chaos experiments to assess the effectiveness of recovery procedures and identify areas for improvement.
+
+Monitoring and alerting: Monitoring the system during and after a simulated disaster is crucial for detecting and responding to issues in real-time. By implementing robust monitoring and alerting systems, organizations can quickly identify failures and initiate recovery procedures to minimize downtime and mitigate the impact on users.
+
+Documentation and documentation: Documenting disaster recovery procedures and maintaining up-to-date documentation is essential for ensuring that recovery efforts are effective and consistent across teams. Clear documentation helps guide recovery efforts, especially during high-stress situations, and ensures that team members have the information they need to execute recovery procedures successfully.
+
+Overall, disaster recovery is an integral part of chaos engineering, ensuring that systems can recover from failures and resume normal operation quickly and effectively. By implementing robust disaster recovery mechanisms and regularly testing them through chaos experiments, organizations can improve system resilience and minimize the impact of failures on their operations and users.
+
+User
+what is chaos monkey
+ChatGPT
+Chaos Monkey is a widely-known tool developed by Netflix, designed to enhance resilience in distributed systems through the practice of chaos engineering. The concept of Chaos Monkey is based on the principle of intentionally introducing failures into a system to test its resilience and fault tolerance.
+
+Here's how Chaos Monkey works and its key features:
+
+Random failure injection: Chaos Monkey operates by randomly selecting instances within a distributed system and terminating them. By doing so, it simulates real-world failures that can occur in production environments.
+
+Cloud-native architecture support: Chaos Monkey is specifically designed for cloud-native architectures, where services are distributed across multiple instances or containers. It works with cloud platforms like Amazon Web Services (AWS) to terminate instances within an Auto Scaling Group.
+
+Controlled chaos: While Chaos Monkey introduces chaos into the system, it does so in a controlled and predictable manner. Users can define schedules and constraints to specify when and where chaos experiments should be conducted, ensuring that they do not disrupt critical operations or impact customer experience during peak usage periods.
+
+Open-source availability: Netflix has open-sourced Chaos Monkey, making it available to the wider software engineering community. This has enabled other organizations to adopt and customize Chaos Monkey to suit their own infrastructure and requirements.
+
+Integration with other tools: Chaos Monkey can be integrated with other chaos engineering tools and monitoring systems to enhance observability and automate response to failures. For example, it can be combined with tools like Spinnaker for continuous delivery and Gremlin for chaos engineering experiments.
+
+Cultural impact: Beyond its technical capabilities, Chaos Monkey has had a significant cultural impact within organizations adopting chaos engineering practices. It promotes a mindset of embracing failure as a means of improving system resilience and encourages teams to prioritize reliability and fault tolerance in their software development and operations processes.
+
+Overall, Chaos Monkey is a powerful tool for building more resilient distributed systems by actively testing their ability to withstand failures. By incorporating Chaos Monkey into their infrastructure testing processes, organizations can identify and address weaknesses before they lead to costly outages or service disruptions.
+
+User
+what is gremlin free in chaos monkey
+ChatGPT
+Gremlin Free is a version of the chaos engineering platform offered by Gremlin, a company that specializes in chaos engineering tools and services. Gremlin provides a range of tools designed to help organizations proactively identify weaknesses and vulnerabilities in their systems by simulating real-world failures.
+
+In the context of your question, Gremlin Free refers to a free version of the Gremlin platform, which offers limited functionality compared to the paid versions. While specific features may vary over time, Gremlin Free typically provides essential chaos engineering capabilities that allow users to conduct basic experiments to test system resilience.
+
+Some common features of Gremlin Free may include:
+
+Host and container-level attacks: Users can target individual hosts or containers within their infrastructure to simulate failures such as CPU exhaustion, memory leaks, network latency, or disk I/O errors.
+
+Injection of failure scenarios: Gremlin Free allows users to inject specific failure scenarios into their systems, such as network partitions, shutdowns, or process kills, to test how the system responds to these events.
+
+Scheduling and control: Users can schedule chaos experiments and control the duration and intensity of the injected failures, providing flexibility in managing testing activities.
+
+Basic monitoring and reporting: Gremlin Free may offer basic monitoring and reporting capabilities to track the impact of chaos experiments on system performance and reliability.
+
+It's worth noting that while Gremlin Free provides valuable functionality for getting started with chaos engineering, organizations with more complex infrastructure or advanced testing requirements may opt for paid versions of the Gremlin platform, which offer additional features, support, and scalability options.
+
+Overall, Gremlin Free serves as an accessible entry point for organizations interested in incorporating chaos engineering into their software development and operations practices, allowing them to begin testing system resilience and reliability without incurring significant costs.
+
+User
+what is chaos kong
+ChatGPT
+It seems there might be some confusion with the term "Chaos Kong." As of my last update in January 2022, there's no widely recognized concept or tool named "Chaos Kong" in the field of chaos engineering or related areas.
+
+However, it's possible that "Chaos Kong" could be a term used internally within a specific organization or a new tool or concept developed after my last update. If it's a new development, I would recommend looking for the most recent information from reliable sources or the organization behind it to understand its purpose and functionality.
+
+User
+what is kube monkey
+ChatGPT
+Kube Monkey, also known as Kube-Monkey, is a chaos engineering tool specifically designed for Kubernetes environments. It operates similarly to Chaos Monkey, which is focused on disrupting instances in cloud-based environments.
+
+Kube Monkey is part of Netflix's Simian Army, a suite of tools for testing and improving the resiliency of cloud-based systems. However, Kube Monkey is tailored specifically for Kubernetes clusters.
+
+Here are some key features and functionalities of Kube Monkey:
+
+Random instance termination: Kube Monkey randomly selects pods or nodes within a Kubernetes cluster and terminates them to simulate failures and test the resilience of the system.
+
+Configurable chaos: Users can configure Kube Monkey to specify the frequency and severity of disruptions, allowing them to control the chaos injection process based on their requirements and testing objectives.
+
+Integration with Kubernetes: Kube Monkey integrates seamlessly with Kubernetes clusters, leveraging Kubernetes APIs to identify and target pods or nodes for termination.
+
+Automated scheduling: Similar to Chaos Monkey, Kube Monkey supports automated scheduling of chaos experiments, enabling users to define specific time windows or intervals for chaos injection.
+
+Open-source availability: Kube Monkey is typically open-source software, making it freely available for organizations to use and customize. This allows users to adapt Kube Monkey to their specific Kubernetes environments and requirements.
+
+Cultural impact: By using Kube Monkey, organizations can foster a culture of resilience and reliability within their teams, encouraging them to proactively test and improve the robustness of their Kubernetes-based applications and infrastructure.
+
+Overall, Kube Monkey is a valuable tool for organizations leveraging Kubernetes to ensure the resilience and reliability of their containerized applications. It helps them identify and address weaknesses in their Kubernetes deployments by simulating failures and testing the system's ability to recover gracefully.
+
+User
+command for docker containers communication
+ChatGPT
+To facilitate communication between Docker containers, you have several options, including networking features provided by Docker itself or using Docker Compose for managing multi-container applications. Here are some commands and approaches commonly used for Docker container communication:
+
+Docker Networking:
+
+Docker provides various networking options for connecting containers. Here are some basic commands:
+
+Create a network:
+
+lua
+Copy code
+docker network create <network_name>
+Run a container attached to a network:
+
+php
+Copy code
+docker run --network=<network_name> <container_image>
+Inspect a network:
+
+php
+Copy code
+docker network inspect <network_name>
+Docker Compose:
+
+Docker Compose is a tool for defining and running multi-container Docker applications. It simplifies the process of managing networks and container communication. You define your multi-container application in a docker-compose.yml file. Here are some basic commands:
+
+Start the application defined in the docker-compose.yml file:
+
+Copy code
+docker-compose up
+Stop the application and remove containers:
+
+Copy code
+docker-compose down
+Inspect services defined in the docker-compose.yml file:
+
+Copy code
+docker-compose ps
+Docker Bridge Networking:
+
+By default, Docker creates a bridge network named bridge and attaches containers to it. Containers attached to the same bridge network can communicate with each other by default.
+
+Docker Host Networking:
+
+Using host networking, containers share the network namespace with the Docker host. This allows containers to communicate directly with the host's network interfaces.
+
+Linking Containers:
+
+In older versions of Docker, you could link containers together to enable communication. However, this approach is now considered legacy, and it's recommended to use user-defined networks or Docker Compose instead.
+
+Remember that the specific commands and approaches you use may vary depending on your specific use case, Docker setup, and networking requirements. It's important to understand the networking options available in Docker and choose the one that best suits your needs.
+
+User
+what is litmus tool 
+ChatGPT
+Litmus is an open-source chaos engineering tool specifically designed for cloud-native environments, such as Kubernetes. It helps users perform chaos experiments to test the resilience of their Kubernetes clusters and applications running on them. Litmus provides a framework for orchestrating chaos experiments and analyzing their impact on the system.
+
+Key features of Litmus include:
+
+Experiment framework: Litmus provides a framework for defining and executing chaos experiments. Users can create custom chaos workflows by defining the sequence of actions to be performed during an experiment, such as injecting failures, inducing latency, or simulating network partitions.
+
+Pre-defined chaos experiments: Litmus comes with a set of pre-defined chaos experiments covering common failure scenarios, such as pod deletion, node failure, network latency, and resource exhaustion. These experiments serve as templates that users can customize and execute to test their Kubernetes clusters' resilience.
+
+Observability and analysis: Litmus offers observability features to monitor the behavior of Kubernetes clusters during chaos experiments. It collects metrics, logs, and other telemetry data to analyze the impact of chaos on the system and identify any issues or weaknesses.
+
+Integration with Prometheus and Grafana: Litmus integrates with Prometheus and Grafana for monitoring and visualization of metrics collected during chaos experiments. This allows users to visualize the effects of chaos on the system's performance and behavior over time.
+
+Customizability and extensibility: Litmus is highly customizable and extensible, allowing users to tailor chaos experiments to their specific use cases and requirements. Users can create custom chaos workflows, define their own experiment scenarios, and extend Litmus functionality through plugins and integrations.
+
+Community support: Litmus has an active community of users and contributors who provide support, share best practices, and contribute to the development of the tool. The community-driven nature of Litmus ensures that it remains up-to-date and responsive to the evolving needs of cloud-native practitioners.
+
+Overall, Litmus is a powerful tool for practicing chaos engineering in Kubernetes environments, enabling users to proactively identify and address resilience issues before they impact production workloads. It helps organizations build more reliable and robust cloud-native applications by subjecting them to controlled chaos and analyzing their response to failure scenarios.
+
+User
+why litmus tool is used
+ChatGPT
+Litmus is used primarily for chaos engineering in cloud-native environments, particularly Kubernetes. Here are several reasons why organizations use the Litmus tool:
+
+Testing resilience: Litmus allows organizations to test the resilience of their Kubernetes clusters and applications by simulating various failure scenarios. By intentionally injecting chaos into the system, organizations can identify weaknesses and vulnerabilities and assess how well their infrastructure and applications respond to unexpected failures.
+
+Identifying weaknesses: Chaos experiments conducted with Litmus help organizations uncover weaknesses in their cloud-native environments that might not be apparent under normal operating conditions. By exposing vulnerabilities through controlled chaos, organizations can take proactive measures to address them before they lead to costly outages or service disruptions.
+
+Validating disaster recovery and high availability: Litmus helps organizations validate their disaster recovery and high availability strategies by testing how well their systems handle failures and recover from them. By simulating real-world failure scenarios, organizations can ensure that their disaster recovery mechanisms are effective and their high availability configurations are robust.
+
+Optimizing incident response: Chaos experiments conducted with Litmus provide valuable insights into how well organizations' incident response processes and procedures perform under stress. By simulating failures and observing how teams respond, organizations can identify gaps in their incident response plans and workflows and take steps to improve them.
+
+Cultural shift towards resilience: Embracing chaos engineering with tools like Litmus fosters a culture of resilience within organizations. It encourages teams to prioritize reliability, fault tolerance, and continuous improvement, ultimately leading to more resilient cloud-native architectures and applications.
+
+Enhancing system monitoring and observability: Litmus provides observability features that enable organizations to monitor the behavior of their Kubernetes clusters during chaos experiments. By collecting metrics, logs, and other telemetry data, organizations can gain insights into how their systems perform under stress and identify areas for optimization.
+
+Community support and collaboration: Litmus has a vibrant community of users and contributors who share best practices, provide support, and contribute to the development of the tool. The collaborative nature of the Litmus community ensures that organizations have access to a wealth of knowledge and resources to help them succeed with chaos engineering.
+
+Overall, Litmus is used to improve the reliability, resilience, and fault tolerance of cloud-native applications and infrastructure by subjecting them to controlled chaos and analyzing their response to failure scenarios. By embracing chaos engineering with tools like Litmus, organizations can build more robust and dependable systems that can withstand the challenges of modern cloud-native environments.
+
+
+what is cloud native environment?
+
+Cloud native is the software approach of building, deploying, and managing modern applications in cloud computing environments.
+
+Microservices Architecture: Cloud-native applications are typically built using a microservices architecture, where the application is composed of small, independent services that are loosely coupled and independently deployable. This architecture allows for agility, scalability, and resilience.
+
+Containers and Orchestration: Cloud-native applications are often containerized using technologies like Docker. Container orchestration platforms, such as Kubernetes, are used to manage and automate the deployment, scaling, and management of containerized applications, providing features like service discovery, load balancing, and self-healing.
+
+DevOps Practices: Cloud-native environments embrace DevOps practices, fostering collaboration between development and operations teams to automate and streamline the software delivery pipeline. Continuous integration, continuous delivery (CI/CD), infrastructure as code (IaC), and automated testing are common practices in cloud-native development.

@@ -1,0 +1,27 @@
+ 361  cd ~/.aws
+  362  ls
+  363  rm credentials
+  364  rm config
+  365  ls
+  366  cd ~/.aws
+  367  ls
+  368  rm credentials
+  369  rm config   # Optional
+  370  ls
+  371  cd ..
+  372  unset AWS_ACCESS_KEY_ID
+  373  unset AWS_SECRET_ACCESS_KEY
+  374  unset AWS_SESSION_TOKEN
+  375  unset AWS_DEFAULT_REGION
+  376  rm -f credentials config
+  377  chmod +x remove_aws_credentials.sh
+  378  ./remove_aws_credentials.sh
+  379  chmod +x remove_aws_credentials.sh
+  380  ./remove_aws_credentials.sh
+  381  chmod +x remove_aws_credentials.sh
+  382  aws configure
+  383  aws eks --region us-east-1 update-kubeconfig --name resilience-team
+  384  kubectl get svc
+  385  kubectl get pods
+  386  kubectl get ns
+  387  history

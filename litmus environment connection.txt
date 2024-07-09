@@ -1,0 +1,13 @@
+ 845  kubectl apply -f infra1-litmus-chaos-enable.yml
+  846  pwd
+  847  cd /mnt
+  848  ls
+  849  cd c
+  850  cd Users/kolanupakabhanu/Downloads/
+  851  kubectl apply -f infra1-litmus-chaos-enable.yml
+
+cd /mnt/c/Users/<username>/Downloads
+
+cd /mnt/c/Users/kolanupakabhanu/Downloads
+
+kubectl apply -f infra-litmus-chaos-enable.yml

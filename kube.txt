@@ -1,0 +1,4 @@
+kubectl get pods -n litmus | grep -E nginx | wc -l
+kubectl get pods
+kubectl get nodes
+kubectl get ns
