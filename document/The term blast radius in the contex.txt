@@ -1,0 +1,84 @@
+The term "blast radius" in the context of software engineering, particularly in chaos engineering and system design, refers to the scope or extent of impact that a failure or disruption can have within a system. It is a concept borrowed from the military and disaster management, where it originally described the area affected by an explosion.
+
+Giving the threshold
+and if it crosses the threshold, the site should switch to site B.
+parameters need to be observed
+In experiment point of view what parameters need to be passed.
+
+### Key Aspects of Blast Radius
+
+1. **Impact Scope:**
+   - Defines how many components, services, or users might be affected by a failure.
+   - Helps in understanding the potential damage a failure can cause.
+
+2. **Controlled Experimentation:**
+   - In chaos engineering, experiments are often conducted with a limited blast radius to minimize risk and ensure safety.
+   - Starting with a small blast radius allows for safe learning and adjustment before scaling up.
+
+3. **Risk Management:**
+   - Identifying and managing the blast radius helps in mitigating risks associated with system changes and failures.
+   - Ensures that failures can be contained and do not cascade into larger system outages.
+
+### Importance of Managing Blast Radius
+
+1. **Minimize Impact:**
+   - Reducing the blast radius ensures that failures affect only a small part of the system, minimizing the overall impact.
+
+2. **Improve Reliability:**
+   - By understanding and controlling the blast radius, teams can design systems that are more resilient to localized failures.
+
+3. **Enhance Safety of Experiments:**
+   - In chaos engineering, limiting the blast radius allows teams to safely introduce failures and learn from them without causing widespread outages.
+
+4. **Facilitate Gradual Rollouts:**
+   - When deploying new features or changes, managing the blast radius allows for incremental rollouts and reduces the risk of introducing significant issues.
+
+### Examples of Blast Radius in Practice
+
+1. **Microservices Architecture:**
+   - In a microservices architecture, if a single service fails, managing the blast radius ensures that only a subset of the system is affected rather than the entire application.
+   - Techniques like circuit breakers and bulkheads can help contain the blast radius.
+
+2. **Database Changes:**
+   - When making schema changes or updates, limiting the blast radius can involve rolling out changes to a subset of the database instances or using feature flags to control access to new features.
+
+3. **Chaos Engineering Experiments:**
+   - When conducting chaos experiments, starting with a small blast radius might involve introducing failures in a development or staging environment before moving to production.
+   - Limiting the blast radius in production might involve targeting a specific service instance or a small percentage of user traffic.
+
+### Steps to Control Blast Radius
+
+1. **Define Scope:**
+   - Clearly define the components or services that will be affected by the experiment or change.
+   
+2. **Start Small:**
+   - Begin with a small, manageable blast radius to observe the impact and gather data.
+   
+3. **Incremental Increase:**
+   - Gradually increase the blast radius based on the insights gained from initial experiments.
+   
+4. **Monitoring and Observability:**
+   - Ensure comprehensive monitoring and observability to track the impact and detect any issues early.
+   
+5. **Rollback Plan:**
+   - Have a clear rollback plan in case the impact is larger than expected or causes significant issues.
+
+### Example Scenario
+
+**Scenario:** A company wants to test the resilience of their microservices architecture by introducing network latency between services.
+
+**Steps:**
+
+1. **Baseline Measurement:** Measure the current performance and error rates.
+   
+2. **Define Initial Blast Radius:** Introduce network latency to only one instance of a service.
+   
+3. **Conduct Experiment:** Monitor the impact on the system and gather data.
+   
+4. **Analyze Results:** Determine if the system can handle the induced latency without significant performance degradation.
+   
+5. **Scale Up:** If the initial experiment is successful, gradually increase the blast radius by introducing latency to more instances or across more services.
+
+6. **Iterate and Learn:** Use the insights to improve system resilience and update the blast radius management strategy.
+
+By managing the blast radius effectively, organizations can ensure that they learn from failures in a controlled manner, improving the overall resilience and reliability of their systems.

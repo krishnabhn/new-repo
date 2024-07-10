@@ -1,0 +1,54 @@
+To commit changes from your local repository to GitHub, you typically follow these steps:
+
+1. Initialize Git (if not already initialized)
+
+If you haven't already set up Git in your local project directory, you need to initialize it:
+
+
+git init
+```
+
+2. Stage your changes
+
+Before committing, you need to stage the changes you want to include in the commit. This tells Git which files you want to include in the next commit.
+
+To stage all changes:
+
+
+git add .
+
+{To stage specific files:
+git add file1.txt file2.txt} optional
+
+3. Commit your changes
+
+Once your changes are staged, you commit them with a message that describes the changes you've made:
+
+
+git commit -m "Your commit message here"
+```
+
+4. Link your local repository to GitHub
+
+To link your local repository to a GitHub repository (if it's not already linked), you need to add a remote repository. You can do this with:
+
+git remote add origin <remote_repository_URL>
+```
+
+Replace `<remote_repository_URL>` with the URL of your GitHub repository. This only needs to be done once per repository.
+
+5. Push your changes to GitHub
+
+Finally, push your committed changes from your local repository to the GitHub repository:
+
+
+git push -u origin master
+```
+
+Here, `-u origin master` sets the upstream branch (where `origin` is the remote repository and `master` is the branch). After setting the upstream branch, you can simply use `git push` in future pushes.
+
+Notes:
+- Make sure you have appropriate permissions to push to the GitHub repository.
+- If you're working on a branch other than `master`, replace `master` with your branch name in the `git push` command.
+
+By following these steps, your local changes will be committed and pushed to your GitHub repository, making them accessible to others and preserving the history of changes in your project.

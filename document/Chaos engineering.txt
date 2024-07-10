@@ -1,0 +1,79 @@
+Chaos engineering
+
+Chaos engineering is a discipline within software engineering focused on improving system resilience by intentionally introducing failures and unpredictable conditions. The goal is to identify weaknesses in a system's infrastructure, software, and processes before they manifest as real-world outages. By simulating adverse conditions, organizations can better understand how their systems behave under stress and can take proactive steps to mitigate potential issues.
+
+### Key Concepts in Chaos Engineering
+
+1. **Hypothesis-Driven Experiments:**
+   - Formulate a hypothesis about how the system should respond to a specific type of failure.
+   - Design experiments to test this hypothesis.
+
+2. **Controlled Experiments:**
+   - Introduce failures in a controlled manner to observe system behavior.
+   - Ensure experiments are conducted in a way that minimizes risk to production environments.
+
+3. **Automation:**
+   - Use automated tools to introduce failures, monitor system behavior, and gather data.
+   - Automation helps to consistently apply chaos experiments and quickly gather results.
+
+4. **Monitoring and Observability:**
+   - Monitor system performance and health during experiments.
+   - Use observability tools to gather metrics, logs, and traces to analyze the impact of failures.
+
+5. **Iterative Process:**
+   - Continuously conduct chaos experiments to uncover new weaknesses as systems evolve.
+   - Use the results to improve system design and operational practices.
+
+### Common Types of Chaos Experiments
+
+1. **Network Latency and Partitioning:**
+   - Simulate increased latency or network partitions to test how services handle communication delays or loss of connectivity.
+
+2. **Service Failures:**
+   - Intentionally shut down or degrade specific services to observe how the system handles the loss of functionality.
+
+3. **Resource Exhaustion:**
+   - Exhaust system resources such as CPU, memory, or disk space to see how the system manages resource contention.
+
+4. **Dependency Failures:**
+   - Simulate failures in external dependencies (e.g., databases, third-party services) to test the system's ability to handle dependency outages.
+
+### Tools for Chaos Engineering
+
+1. **Chaos Monkey:**
+   - Part of the Netflix Simian Army, Chaos Monkey randomly terminates instances in production to test system resilience.
+
+2. **Gremlin:**
+   - A commercial tool that provides a comprehensive suite of chaos engineering experiments for simulating various types of failures.
+
+3. **Chaos Mesh:**
+   - A Kubernetes-native chaos engineering platform that allows users to inject failures into Kubernetes clusters.
+
+4. **Litmus:**
+   - An open-source tool for chaos engineering in Kubernetes, providing a range of predefined experiments.
+
+### Benefits of Chaos Engineering
+
+- **Improved Resilience:** By proactively identifying and addressing weaknesses, systems become more resilient to real-world failures.
+- **Increased Confidence:** Regular chaos experiments build confidence in the system's ability to withstand and recover from failures.
+- **Better Incident Response:** Teams become more familiar with failure scenarios and can respond more effectively to incidents.
+- **Cultural Shift:** Encourages a culture of continuous improvement, experimentation, and learning within engineering teams.
+
+### Getting Started with Chaos Engineering
+
+1. **Define Objectives:**
+   - Identify key business objectives and critical system components that need to be resilient.
+
+2. **Start Small:**
+   - Begin with simple experiments in lower environments before moving to production.
+
+3. **Build a Team:**
+   - Assemble a cross-functional team with representatives from development, operations, and quality assurance.
+
+4. **Establish Monitoring:**
+   - Ensure comprehensive monitoring and observability are in place to capture the impact of experiments.
+
+5. **Iterate and Scale:**
+   - Gradually increase the complexity and scope of experiments based on initial findings and system maturity.
+
+Chaos engineering is an essential practice for organizations that rely on highly available and resilient systems. By systematically introducing controlled failures, teams can uncover hidden vulnerabilities and ensure their systems can withstand unexpected disruptions.

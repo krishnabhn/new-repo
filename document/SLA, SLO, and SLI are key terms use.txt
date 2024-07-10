@@ -1,0 +1,49 @@
+SLA, SLO, and SLI are key terms used in the context of service management and reliability engineering to define and measure the performance and reliability of services. Here’s a detailed explanation of each term:
+
+### Service Level Agreement (SLA)
+
+**SLA** stands for **Service Level Agreement**. It is a formal contract between a service provider and a customer that outlines the expected level of service. The SLA defines the specific metrics by which service is measured and the remedies or penalties if the agreed service levels are not achieved.
+
+- **Purpose:** To set clear expectations between the service provider and the customer regarding the quality and type of service to be delivered.
+- **Components:**
+  - **Service Description:** Detailed information about the services provided.
+  - **Performance Metrics:** Specific metrics that will be used to measure the service (e.g., uptime, response time).
+  - **Responsibilities:** Responsibilities of both the service provider and the customer.
+  - **Penalties and Remedies:** Consequences if the service provider fails to meet the agreed service levels (e.g., financial penalties, service credits).
+
+### Service Level Objective (SLO) "internal"
+
+**SLO** stands for **Service Level Objective**. It is a specific, measurable characteristic of the SLA that defines the target level for a particular aspect of the service. SLOs are used internally by service providers to ensure they meet the terms of the SLA.
+
+- **Purpose:** To provide a clear and measurable target for service performance that guides the operations and improvement efforts of the service provider.
+- **Components:**
+  - **Metric:** The specific metric being measured (e.g., availability, latency).
+  - **Target:** The specific goal or threshold that the metric should meet (e.g., 99.9% uptime).
+
+### Service Level Indicator (SLI)
+
+parameters
+
+
+**SLI** stands for **Service Level Indicator**. It is a quantitative measure of some aspect of the service that is used to assess performance against the SLO. SLIs are specific metrics that are collected and monitored to determine if the service is meeting the SLOs.
+
+- **Purpose:** To provide real-time data and insights into the performance of the service, enabling the service provider to monitor and manage service levels effectively.
+- **Components:**
+  - **Metric:** The specific aspect of the service being measured (e.g., request latency, error rate).
+  - **Measurement:** The actual value or measurement collected (e.g., average response time of 200ms).
+
+### Relationship Between SLA, SLO, and SLI
+
+- **SLA:** The agreement between the service provider and the customer. It sets the overall expectations and penalties.
+- **SLO:** The specific target within the SLA that the service provider aims to achieve. It is more granular and operationally focused.
+- **SLI:** The actual metric used to measure performance against the SLO. It provides the data needed to determine if the SLO is being met.
+
+### Example
+
+Let’s consider a web hosting service:
+
+- **SLA:** The web hosting service agrees to provide 99.9% uptime per month. If this is not met, the customer will receive a service credit.
+- **SLO:** To achieve the SLA, the internal objective is to maintain an availability of 99.95% per month to ensure a buffer.
+- **SLI:** The actual measured availability of the service, calculated by monitoring system uptime, which might show an availability of 99.96% in a given month.
+
+By understanding and effectively using SLAs, SLOs, and SLIs, organizations can manage and improve their service reliability, ensuring better customer satisfaction and operational excellence.
