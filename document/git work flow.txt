@@ -1,0 +1,26 @@
+git work flow
+branching strategies
+git commit
+git pull
+git push
+git branching
+git merging
+git rebase
+merge conflicts
+
+d1   d2   <<< === >>>
+
+thumb rule* = first pull and push 
+init  create a new repo connection btw local and remote
+
+
+how renaming file will be deleted automatically in remote repo
+how to un commit the changes
+how to check logs for specific commit id?
+
+merge conflict do this
+
+
+
+
+
