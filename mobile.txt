@@ -1,3 +1,6 @@
 this 1st line
 this is 2nd line 
 this master 3rd commit
+this is 2nd line
+this is 3rd line
+newbranch
