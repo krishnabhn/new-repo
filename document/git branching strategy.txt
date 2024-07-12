@@ -1,0 +1,9 @@
+git branching strategy
+
+uber example
+
+to deliver with new changes frequently to customer
+master branch : main code
+feature branch: if we want to introduce any new changes to existing application. new code written by developers and merge to master branch
+release branch: If we are satisfied with the master branch code and don't want to add any new changes to code we create a release branch and deliver to the customer
+hotfix branch: very short lived projects, immediate changes will be made, who is having bugs and it is merged back to master/main branch. 

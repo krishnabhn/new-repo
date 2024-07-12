@@ -1,0 +1,8 @@
+git work flow
+pull code from repo to local
+cloning
+forking
+branching
+merging
+git rebase 
+git revert
